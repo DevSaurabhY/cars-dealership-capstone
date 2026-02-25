@@ -1,23 +1,24 @@
-def fetch_dealers(request):
-    dealers = {
-        "status": 200,
-        "dealers": [
+def fetch_dealers_by_state(request, state):
+    if state.lower() == "kansas":
+        dealers = [
             {
                 "id": 1,
                 "full_name": "Best Cars Dealership",
-                "city": "New York",
-                "state": "NY",
-                "address": "123 Main Street",
-                "zip": "10001"
+                "city": "Wichita",
+                "state": "KS",
+                "address": "123 Main St",
+                "zip": "67202"
             },
             {
                 "id": 2,
-                "full_name": "Super Auto Sales",
-                "city": "Chicago",
-                "state": "IL",
-                "address": "456 Market Street",
-                "zip": "60601"
+                "full_name": "Super Autos",
+                "city": "Topeka",
+                "state": "KS",
+                "address": "456 Oak Ave",
+                "zip": "66603"
             }
         ]
-    }
-    return JsonResponse(dealers)
+    else:
+        dealers = []
+
+    return JsonResponse(dealers, safe=False)
