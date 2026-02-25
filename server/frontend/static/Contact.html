@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <title>Contact Us - Cars Dealership</title>
 
-     <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
 
-    <!-- Correct CSS link -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
 
+<div class="container mt-4">
+
     <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="About.html">About Us</a>
-        <a href="Contact.html" class="active">Contact Us</a>
+    <nav class="nav nav-pills mb-4">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="About.html">About Us</a>
+        <a class="nav-link active" href="Contact.html">Contact Us</a>
     </nav>
 
-    <h1>Contact Us</h1>
-    <p>We would love to hear from you. Reach out using the details below.</p>
+    <h1 class="mb-3">Contact Us</h1>
+    <p class="lead">
+        We would love to hear from you. Reach out using the details below.
+    </p>
 
     <!-- Contact Image -->
-    <img src="images/contact.jpg" alt="Contact Us" width="400">
+    <div class="mb-4">
+        <img src="/static/images/contact.jpg" 
+             alt="Contact Us" 
+             class="img-fluid rounded shadow">
+    </div>
 
-    <div class="contact-details">
+    <div class="card p-4 shadow-sm">
         <h2>Dealership Contact Information</h2>
         <p><strong>Address:</strong> 123 Main Street, New Delhi, India</p>
         <p><strong>Phone:</strong> +91 98765 43210</p>
         <p><strong>Email:</strong> support@carsdealership.com</p>
         <p><strong>Working Hours:</strong> Monday - Saturday, 9:00 AM - 7:00 PM</p>
     </div>
+
+</div>
 
 </body>
 </html>
