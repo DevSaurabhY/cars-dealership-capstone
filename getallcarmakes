@@ -1,0 +1,3 @@
+curl -X GET http://127.0.0.1:8000/djangoapp/get_cars
+
+{"CarModels":[{"id":1,"name":"Camry","make":{"id":1,"name":"Toyota"}},{"id":2,"name":"Corolla","make":{"id":1,"name":"Toyota"}},{"id":3,"name":"Civic","make":{"id":2,"name":"Honda"}},{"id":4,"name":"Accord","make":{"id":2,"name":"Honda"}},{"id":5,"name":"CR-V","make":{"id":2,"name":"Honda"}},{"id":6,"name":"RAV4","make":{"id":1,"name":"Toyota"}},{"id":7,"name":"F-150","make":{"id":3,"name":"Ford"}},{"id":8,"name":"Escape","make":{"id":3,"name":"Ford"}},{"id":9,"name":"X5","make":{"id":4,"name":"BMW"}},{"id":10,"name":"3 Series","make":{"id":4,"name":"BMW"}},{"id":11,"name":"A4","make":{"id":5,"name":"Audi"}},{"id":12,"name":"Q5","make":{"id":5,"name":"Audi"}}]}
