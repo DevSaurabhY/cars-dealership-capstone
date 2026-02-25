@@ -1,2 +1,76 @@
-<td>{{ dealer.city }}</td>
-<td>{{ dealer.state }}</td>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Dealership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .nav {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Car Dealership</h1>
+
+<div class="nav">
+    <a href="/login">Login</a> |
+    <a href="/signup">Sign Up</a>
+</div>
+
+<br><br>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Dealer Name</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Address</th>
+        <th>ZIP Code</th>
+    </tr>
+
+    {% for dealer in dealers %}
+    <tr>
+        <td>{{ dealer.id }}</td>
+        <td>
+            <a href="/dealer/{{ dealer.id }}">
+                {{ dealer.full_name }}
+            </a>
+        </td>
+        <td>{{ dealer.city }}</td>
+        <td>{{ dealer.state }}</td>
+        <td>{{ dealer.address }}</td>
+        <td>{{ dealer.zip }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+<p>Showing dealerships before login as required.</p>
+
+</body>
+</html>
